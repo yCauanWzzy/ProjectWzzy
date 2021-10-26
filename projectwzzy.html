@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectWzzy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagens/favicon_io/favicon-32x32.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0px;
+        }
+        img#imagemhora{
+            border-radius: 1000px;
+            width: 250px;
+        }
+        h1{
+            padding: 10px;
+            color: white;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.637);
+            background-color: rgba(0, 0, 0, 0.363);
+            margin: 0px;
+            min-width: 280px;
+        }
+        h2{
+            padding: 10px;
+        }
+        h3{
+            padding: 10px;
+            font-family: 'Rampart One';
+            font-size: 1.5em;
+        }
+        main.dia{
+            padding: 5px;
+            margin-top: 30px;
+            text-align: center;
+            min-width: 200px;
+            max-width: 600px;
+        }
+        footer{
+            margin-top:300px;
+        }
+        a.linkfooter{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onload="carregarhora()">
+    <header>
+        <h1 class="t1">Bem vindo ao <span>ProjectWzzy</span></h1>
+    </header>
+    <main class="dia">
+        <div>
+            <h2 id="horares1"></h2>
+        </div>
+
+        <div>
+            <img width="200px" id="imagemhora" src="noite-sonhos-natureza-conexao-planeta-foto-greg-rakozy-unsplash.jpg" alt="">
+            <h3 id="horares2" ></h3>
+        </div>
+        <a class="button" href="Pagina.html">Continuar</a>
+    </main>
+    <footer><p>&copy; <a class="linkfooter" href="https://www.facebook.com/cauan.elias.9" target="_blank">CauanElias</a></p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

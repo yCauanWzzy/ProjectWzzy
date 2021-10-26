@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagens/favicon_io/favicon-32x32.png" type="image/x-icon">
+    <title>Java</title>
+    <style>
+        body{
+            font-size: 1.1em;
+        }
+        p#idaderes1>img{
+            display: block;
+            margin: auto;
+            text-align: center;
+            width: 300px;
+            height: 300px;
+            border-radius:360px ;
+            box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.384);
+        }
+        div{
+            text-align: center;
+        }
+        label{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="dif">
+    <main>
+        <a class="button2" href="Pagina.html">voltar</a>
+        <div class="java">
+             <h1>Somador</h1>
+             +<input type="radio" name="oper" id="" checked>
+             -<input type="radio" name="oper" id=""><br>
+             <input type="number" name="" id="soma1"> +
+             <input type="number" name="" id="soma2"><br>
+             <input type="button" value="Somar" onclick="clicasoma()">
+             <p id="somares">Resultado</p>
+             <script>
+                 function clicasoma(){
+                    var soma1=document.getElementById('soma1')
+                    var soma2=document.getElementById('soma2')
+                    var oper=document.getElementsByName('oper')
+                    var somares=document.getElementById('somares')
+                    var somar1=Number(soma1.value)
+                    var somar2=Number(soma2.value)
+                    if(oper[0].checked){
+                    var soma= somar1 + somar2
+                    somares.innerHTML=soma
+                    }else{
+                        var soma= somar1 - somar2
+                    somares.innerHTML=soma 
+                    }
+                 }
+             </script>
+        </div>
+        <div class="java">
+            <h1>Detran</h1>
+            <input type="number" name="" id="velvia" placeholder="Velocidade da via">
+            <input type="number" name="" id="vel" placeholder="Velocidade do carro">
+            <input type="button" value="Verificar" onclick="calcvel()">
+            <p id="velres"></p>
+            <script>
+                function calcvel(){
+                    var velvia=document.getElementById('velvia')
+                    var velvia=Number(velvia.value)
+                    var vel=document.getElementById('vel')
+                    var velres=document.getElementById('velres')
+                    var vel=Number(vel.value)
+                    if(vel >velvia){
+                        var velr= vel - velvia 
+                        velres.innerHTML='Voce foi multado, estava '+velr+'Km/h acima do permitido'
+
+                    }else{
+                        velres.innerHTML='dirija com cuidado'
+                    }
+                    if (vel > 1000){
+                        velres.innerHTML='Por favor entre em contato com a nasa, para ajudar com o desenvolvimento aeroespacial'
+                    }
+                }
+            </script>
+        </div>
+        <div class="java">
+            <h1>Perfil</h1>
+            <p style="text-align: justify;">Insira seus dados:</p>
+            <p>
+                <input type="number" name="" id="anonasc" placeholder="Ano de nascimennto:">
+                <p>Sexo:</p>
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p><input type="button" value="Verificar" onclick="calcidade()"> </p>
+            
+            <p id="idaderes1"></p>
+            <p id="idaderes"></p> 
+        </div>
+        <div class="java">
+            <h1>Tabuada</h1>
+            <input type="number" name="" id="tab" placeholder="inicio:">
+            <input type="button" value="Contar" onclick="calctab()">
+            <p>Esperando dados:  </p>
+            <select name="" id="tabres"></select>
+            <script>
+                var tabres=document.getElementById('tabres')
+                function calctab(){
+                    var tab=document.getElementById('tab')
+                    tab=Number(tab.value)
+                    tabres.innerHTML=tab
+                    if(tab==0){
+                        alert("numero invalido")
+                    }else{
+                        for(var c=1;c<=10;c+=1){
+                            var item=document.createElement('option')
+                            item.text=`${tab} x ${c} = ${tab*c}`
+                            tabres.appendChild(item)
+                        }
+                    }
+                }
+            </script>
+        </div>
+        <div class="java">
+            <h1>Vamos comecar</h1>
+            <p>Inicio: <input type="number" name="" id="inicio" placeholder="inicio:"></p>
+            <p>Fim: <input type="number" name="" id="fim" placeholder="fim:"></p>
+            <p>Passo:  <input type="number" name="" id="passo" placeholder="passo:"></p>
+            <input type="button" value="Contar" onclick="calccont()">
+            <p id="conta">Esperando dados...  </p>
+            <p id="contresult"></p>
+            <script>
+                function calccont(){
+                    var inicio=document.getElementById('inicio')
+                    var fim=document.getElementById('fim')
+                    var passo=document.getElementById('passo')
+                    var contresult=document.getElementById('contresult')
+                    var conta=document.getElementById('conta')
+                    inicio=Number(inicio.value)
+                    fim=Number(fim.value)
+                    passo=Number(passo.value)
+                        if(inicio==0|| fim==0||passo==0){
+                            alert('erro')
+                        }else{
+                            //regressivo
+                            if(inicio > fim){
+                            conta.innerHTML='Contando: '
+                        for(var cont =inicio; cont>= fim; cont -=passo){
+                            contresult.innerHTML+=' '+cont
+                        }
+                        }else{
+                            //progressiva
+                            conta.innerHTML='Contando: '
+                            for(var cont =inicio; cont<= fim; cont +=passo){
+                            contresult.innerHTML+=' '+cont
+                            }  
+                        }
+                    }
+                }
+            </script>
+        </div>
+
+    </main>
+    <script src="scripthora.js"></script>
+</body>
+</html>

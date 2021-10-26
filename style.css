@@ -1,0 +1,217 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+:root{
+    --cor0:#b7e0ff;
+    --cor1:#52B5FA;
+    --cor2:#3F6ED4;
+    --cor3:#525AEB;
+    --cor4:#613FD4;
+    --cor5:#A351F5;
+}
+h1{
+    text-align: center;
+}
+body.dif{
+    background-image: linear-gradient(230deg,var(--cor1),var(--cor3),var(--cor5),var(--cor4));
+}
+span{
+    font-style: italic;
+}
+h1.t1{
+    padding: 10px;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.637);
+    background-color: rgba(0, 0, 0, 0.363);
+    margin: 0px;
+}
+h1.t2{
+    padding: 10px;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.637);
+    font-size: 3em;
+}
+header.menup{
+    min-width: 280px;
+    background-image: linear-gradient(to bottom,var(--cor1),var(--cor2),var(--cor4));
+    padding: 20px;
+}
+img{
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.267);
+
+}
+a.main:hover{
+    color:  #5f3ad6;
+}
+img.hora{
+    width: 200px;
+}
+video{
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.322);
+}
+audio{
+    width: 90%;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.267);
+    border-radius: 50px;
+}
+div.iframe{
+    position: relative;
+    padding: 20px;
+    padding-bottom: 59%;
+    border-radius: 5px;
+    margin: 0px -20px;
+}
+div.java{
+    background-color: rgba(128, 128, 128, 0.349);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.452);
+}
+iframe{
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+}
+div.linkht{
+    background-color: rgba(128, 128, 128, 0.199);
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.452);
+}
+nav.button1{
+    font-size: 1em;
+    height: 35px;
+    background-color: var(--cor4);
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.253);
+    border-radius: 0px 0px 15px 15px;
+    margin-bottom: 1ex;
+    padding-bottom: 15px;
+}
+nav a.button1{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a.button1:hover{
+    background-color: var(--cor5);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.281);
+    padding: 11px;
+}
+main{
+    background-color: white;
+    margin: auto;
+    max-width: 800px;
+    min-width: 280px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.514);
+    padding: 30px;
+}
+p{
+    font-size: 1.1em;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p.copy{
+    background-color: rgba(0, 0, 0, 0.459);
+    margin: auto;
+    padding: 10px;
+    margin-top: 0px;
+    max-width: 500px;
+    min-width: 200px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.37);
+}
+.subtitle{
+    background-color: #B0C1D9;
+    padding: 20px;
+    border-radius:100px ;
+}
+img#imagemhora{
+    border-radius: 100px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.479);
+}
+a.linkwhite{
+    color: white;
+}
+footer{
+    text-align: center;
+    color: white;
+}
+a.button{
+    background-image: linear-gradient(to top,var(--cor1),var(--cor5));
+    display: block;
+    padding: 10px;
+    width: 100px;
+    margin: auto;
+    border-radius: 10px;
+    font-family: 'Rampart One';
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.479);
+
+}
+a.button:hover{
+    background-image: linear-gradient(to top,var(--cor0),var(--cor4));
+    display: block;
+    padding: 10px;
+    width: 110px;
+    margin: auto;
+    border-radius: 10px;
+    font-family: 'Rampart One';
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.637);
+    font-size: 1.1em;
+
+}
+a.button2{
+    background-color: grey;
+    display: block;
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    font-family: 'Rampart One';
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.479);
+
+}
+a.button2:hover{
+    background-color: rgb(182, 182, 182);
+    display: block;
+    padding: 10px;
+    width: 110px;
+    border-radius: 10px;
+    font-family: 'Rampart One';
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.637);
+    font-size: 1.1em;
+
+}
