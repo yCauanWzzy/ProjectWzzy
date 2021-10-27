@@ -29,21 +29,41 @@
         input{
             border-radius: 5px;
         }
+        .buttonjava{
+            font-size: 0.8em;
+            border-color: rgba(0, 0, 0, 0.281);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .buttonjava:hover{
+            font-size: 0.9em;
+
+        }
+        .boxjava{
+            font-size: 0.8em;
+            padding: 3px;
+            margin: 2px;
+            border-color: rgba(0, 0, 0, 0.3);
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body class="dif">
     <main>
         <a class="button2" href="Pagina.html">voltar</a>
         <div class="java">
-             <h1>Somador</h1>
-             +<input type="radio" name="oper" id="" checked>
-             -<input type="radio" name="oper" id=""><br>
-             <input type="number" name="" id="soma1"> +
-             <input type="number" name="" id="soma2"><br>
-             <input type="button" value="Somar" onclick="clicasoma()">
+             <h1>Calculadora v1</h1>
+             <p>
+                adição <input type="radio" name="oper" id="" checked><br>
+                Subtração<input type="radio" name="oper" id=""><br>
+                Multiplicação<input type="radio" name="oper" id=""><br>
+                divisão<input type="radio" name="oper" id=""><br>
+             </p>
+             <input class="boxjava" type="number" name="" id="soma1" placeholder="Insira o primeiro numero:">
+             <input class="boxjava" type="number" name="" id="soma2" placeholder="Insira o segundo numero:"><br><br>
+             <input class="buttonjava" type="button" value="Executar" onclick="clicasoma()">
              <p id="somares">Resultado</p>
              <script>
-                 function clicasoma(){
+                function clicasoma(){
                     var soma1=document.getElementById('soma1')
                     var soma2=document.getElementById('soma2')
                     var oper=document.getElementsByName('oper')
@@ -51,20 +71,28 @@
                     var somar1=Number(soma1.value)
                     var somar2=Number(soma2.value)
                     if(oper[0].checked){
-                    var soma= somar1 + somar2
-                    somares.innerHTML=soma
-                    }else{
+                        var soma= somar1 + somar2
+                        somares.innerHTML=soma
+                    }else if(oper[1].checked){
                         var soma= somar1 - somar2
-                    somares.innerHTML=soma 
+                        somares.innerHTML=soma 
+                    } else if(oper[2].checked){
+                        var soma= somar1 * somar2
+                        somares.innerHTML=soma
+                    }else{
+                        var soma= somar1 / somar2
+                        somares.innerHTML=soma
                     }
-                 }
+                }
              </script>
         </div>
+        <!--Detran-->
         <div class="java">
             <h1>Detran</h1>
-            <input type="number" name="" id="velvia" placeholder="Velocidade da via">
-            <input type="number" name="" id="vel" placeholder="Velocidade do carro">
-            <input type="button" value="Verificar" onclick="calcvel()">
+            <p style="text-align: justify;">Insira os dados:</p>
+            <p>Velocidade da pista: <input class="boxjava" type="number" name="" id="velvia" placeholder="Velocidade da pista: "></p>
+            <p>Velocidade do carro: <input class="boxjava" type="number" name="" id="vel" placeholder="Velocidade do carro: "></p><br><br>
+            <input class="buttonjava" type="button" value="Verificar" onclick="calcvel()">
             <p id="velres"></p>
             <script>
                 function calcvel(){
@@ -75,7 +103,7 @@
                     var vel=Number(vel.value)
                     if(vel >velvia){
                         var velr= vel - velvia 
-                        velres.innerHTML='Voce foi multado, estava '+velr+'Km/h acima do permitido'
+                        velres.innerHTML='Você foi multado, estava '+velr+'Km/h acima do permitido'
 
                     }else{
                         velres.innerHTML='dirija com cuidado'
@@ -86,26 +114,29 @@
                 }
             </script>
         </div>
+        <!--perfil-->
         <div class="java">
             <h1>Perfil</h1>
             <p style="text-align: justify;">Insira seus dados:</p>
             <p>
-                <input type="number" name="" id="anonasc" placeholder="Ano de nascimennto:">
+                <input class="boxjava" type="number" name="" id="anonasc" placeholder="Ano de nascimento:">
                 <p>Sexo:</p>
                 <input type="radio" name="radsex" id="mas" checked>
                 <label for="mas">Masculino</label>
                 <input type="radio" name="radsex" id="fem">
                 <label for="fem">Feminino</label>
             </p>
-            <p><input type="button" value="Verificar" onclick="calcidade()"> </p>
+            <p><input class="buttonjava" type="button" value="Verificar" onclick="calcidade()"> </p>
             
             <p id="idaderes1"></p>
             <p id="idaderes"></p> 
         </div>
+        <!--tabuada-->
         <div class="java">
             <h1>Tabuada</h1>
-            <input type="number" name="" id="tab" placeholder="inicio:">
-            <input type="button" value="Contar" onclick="calctab()">
+            <p style="text-align: justify;">Insira o numero que gostaria de ver a tabuada: </p>
+            <input class="boxjava" type="number" name="" id="tab" placeholder="Inicio:"><br><br>
+            <input class="buttonjava" type="button" value="Contar" onclick="calctab()">
             <p>Esperando dados:  </p>
             <select name="" id="tabres"></select>
             <script>
@@ -126,12 +157,13 @@
                 }
             </script>
         </div>
+        <!--Contador-->
         <div class="java">
-            <h1>Vamos comecar</h1>
-            <p>Inicio: <input type="number" name="" id="inicio" placeholder="inicio:"></p>
-            <p>Fim: <input type="number" name="" id="fim" placeholder="fim:"></p>
-            <p>Passo:  <input type="number" name="" id="passo" placeholder="passo:"></p>
-            <input type="button" value="Contar" onclick="calccont()">
+            <h1>Contador</h1><br>
+            <p>Inicio da contagem: <input class="boxjava" type="number" name="" id="inicio" placeholder="Inicio:"></p>
+            <p>Fim da contagem: <input class="boxjava" type="number" name="" id="fim" placeholder="Fim:"></p>
+            <p>Passo de contagem:  <input class="boxjava" type="number" name="" id="passo" placeholder="Passo:"></p>
+            <input class="buttonjava" type="button" value="Contar" onclick="calccont()">
             <p id="conta">Esperando dados...  </p>
             <p id="contresult"></p>
             <script>
