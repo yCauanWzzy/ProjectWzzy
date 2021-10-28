@@ -12,7 +12,7 @@ h1{
     text-align: center;
 }
 body.dif{
-    background-image: linear-gradient(230deg,var(--cor1),var(--cor3),var(--cor5),var(--cor4));
+    background-image: linear-gradient(45deg,var(--cor3),var(--cor5),var(--cor4));
 }
 span{
     font-style: italic;
@@ -66,8 +66,10 @@ div.iframe{
 }
 div.java{
     background-color: rgba(1, 1, 63, 0.151);
-    padding: 20px;
-    margin: 20px;
+    max-width: 650px;
+    min-width: 280px;
+    padding: 10px;
+    margin: 10px;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.452);
 }
@@ -214,4 +216,72 @@ a.button2:hover{
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.637);
     font-size: 1.1em;
 
+}
+/*calculadora*/
+.calcfundo{
+    background-image: linear-gradient(45deg, var(--cor2),var(--cor5),var(--cor4));
+    height: 65vh;
+    max-width: 670px;
+    margin: 20px;
+    min-width: 280px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.445);
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.calculadora>h1{
+    margin: 0px;
+    padding: 5px;
+}
+.calculadora{
+position: absolute;
+left: 50%;
+transform: translate(-50%);
+background-color: rgba(0, 0, 0, 0.808);
+border-radius: 15px;
+padding: 15px;
+box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.445);
+}
+.calcbutton{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: rgb(71, 71, 71);
+    margin: 3px;
+    color: white;
+    border: 0px;
+}
+.calcbutton:hover{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 6px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    border: 0px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.664);
+}
+#calculadorares{
+    background-color: white;
+    height:30px;
+    font-size: 25px;
+    color: black;
+    width: 220px;
+    margin: auto;
+}
+/*footer*/
+footer.wzzy{
+    margin-top:300px;
+}
+footer{
+    margin-top:100px;
+}
+a.linkfooter{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }

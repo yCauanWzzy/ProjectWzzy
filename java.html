@@ -8,6 +8,10 @@
     <link rel="shortcut icon" href="Imagens/favicon_io/favicon-32x32.png" type="image/x-icon">
     <title>Java</title>
     <style>
+        *{
+            margn: 0px;
+            pading: 0px;
+        }
         body{
             font-size: 1.1em;
         }
@@ -22,8 +26,13 @@
             border-radius:360px ;
             box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.384);
         }
+        main>div.java{
+        margin: auto;
+        margin-top: 20px;
+        }
         div{
             text-align: center;
+            margin: auto;
         }
         label{
             font-family: Arial, Helvetica, sans-serif;
@@ -48,6 +57,9 @@
             min-width: 200px;
             border-color: rgba(0, 0, 0, 0.3);
             box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+        }
+        footer{
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -200,8 +212,67 @@
                 }
             </script>
         </div>
+        <div class="calcfundo">
+            <h1 style="padding-top: 10px;">Calculadora v2</h1>
+            <div class="calculadora">
+                <h1>Calculadora</h1>
+                <p id="calculadorares"></p>
+                <table>
+                    <tr>
+                        <td><button class="calcbutton" onclick="clean()">C</button></td>
+                        <td><button class="calcbutton" onclick="back()"><</button></td>
+                        <td><button class="calcbutton" onclick="insert('/')">/</button></td>
+                        <td><button class="calcbutton" onclick="insert('*')">X</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="calcbutton" onclick="insert('7')">7</button></td>
+                        <td><button class="calcbutton" onclick="insert('8')">8</button></td>
+                        <td><button class="calcbutton" onclick="insert('9')">9</button></td>
+                        <td><button class="calcbutton" onclick="insert('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="calcbutton" onclick="insert('4')">4</button></td>
+                        <td><button class="calcbutton" onclick="insert('5')">5</button></td>
+                        <td><button class="calcbutton" onclick="insert('6')">6</button></td>
+                        <td><button class="calcbutton" onclick="insert('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="calcbutton" onclick="insert('1')">1</button></td>
+                        <td><button class="calcbutton" onclick="insert('2')">2</button></td>
+                        <td><button class="calcbutton" onclick="insert('3')">3</button></td>
+                        <td rowspan="2"><button class="calcbutton" style="height: 106px;" onclick="calccalculadora()">=</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="calcbutton"  style="width: 106px;" onclick="insert('0')">0</button></td>
+                        <td><button class="calcbutton" onclick="insert('.')">.</button></td>
+                    </tr>
+                </table>
+                <script>
+                    function insert(num){
+                      var calcnumber=document.getElementById('calculadorares').innerHTML;
+                      document.getElementById('calculadorares').innerHTML =calcnumber+num;
+                    }
+                    function clean(){
+                        document.getElementById('calculadorares').innerHTML='';                    
+                    }
+                    function back(){
+                        var calculadorares=document.getElementById('calculadorares').innerHTML;
+                        document.getElementById('calculadorares').innerHTML=calculadorares.substring(0,calculadorares.length -1)
+                    }
+                    function calccalculadora() {
+                        var calculadorares=document.getElementById('calculadorares').innerHTML;
+                        if(calculadorares){
+                            document.getElementById('calculadorares').innerHTML=eval(calculadorares);
+                        }else{
+                            alert("vazio")
+                        }
+                    }
+                </script>
+            </div>
+        </div>
 
     </main>
+    <footer><a class="linkfooter" href="https://www.facebook.com/cauan.elias.9" target="_blank">&copy; CauanElias</a></footer>
     <script src="scripthora.js"></script>
 </body>
 </html>
