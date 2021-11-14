@@ -5,13 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="Imagens/favicon_io/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Imagens/favicon_io/favicon.ico" type="image/x-icon">
     <title>Java</title>
     <style>
-        *{
-            margn: 0px;
-            pading: 0px;
-        }
         body{
             font-size: 1.1em;
         }
@@ -269,6 +265,46 @@
                     }
                 </script>
             </div>
+        </div>
+        <div class="java">
+            <h1>Calculadora imc</h1>
+            <p>Peso: <input type="text" name="" id="pes" placeholder="Insira peso"></p>
+            <p>Altura: <input type="text" name="" id="alt" placeholder="Insira altura"></p>
+            <input type="button" value="Calcular" onclick="calcimc()">
+            <p id="resultimc">Resultado:</p>
+            <script>
+                function calcimc(){
+                var pes=document.getElementById("pes")
+                var alt=document.getElementById("alt")
+                var resultimc=document.getElementById("resultimc")
+                peso=Number(pes.value)
+                altu=Number(alt.value)
+                if(altu==0 ||peso==0){
+                    alert("erro")
+                }else{
+                altu=altu*2;
+               var somaimc = peso/altu;
+               if(somaimc<18.5){
+                resultimc.innerHTML='abaixo do peso com IMC: '
+               } else if (somaimc>=18.6 && somaimc<= 24.9){
+                resultimc.innerHTML='Peso ideal com IMC: '
+               }else if (somaimc>=25 && somaimc<= 29.9){
+                resultimc.innerHTML='Levemente acima do peso, com IMC: '
+               } else if (somaimc>=30 && somaimc<= 34.9){
+                resultimc.innerHTML='Obesidade grau 1, com IMC: '
+               }else if (somaimc>=35 && somaimc<= 39.9){
+                resultimc.innerHTML='Obesidade grau 2(Severa), com IMC: '
+               }else if (somaimc>=40){
+                resultimc.innerHTML='Obesidade grau 3(morbida), com IMC: '
+               }else if(somaimc>1000){
+                   resultimc.innerHTML='Você é um planeta '
+               } else{
+                   resultimc.innerHTML="Tente novamente"
+               }
+               resultimc.innerHTML+=somaimc
+                }
+                }
+            </script>
         </div>
 
     </main>

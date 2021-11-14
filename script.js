@@ -23,6 +23,7 @@ function carregarhora(){
         imghora.src ='Imagens/DIa/noite.jpg'
         horares2.innerHTML='Boa Noite'
         document.body.style.background="url('Imagens/DIa/noite1.jpg')"
+        
     } else{
     }    
 }

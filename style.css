@@ -7,6 +7,8 @@
     --cor3:#525AEB;
     --cor4:#613FD4;
     --cor5:#A351F5;
+    --color-text:white;
+    --color-back:grey;
 }
 h1{
     text-align: center;
@@ -220,7 +222,7 @@ a.button2:hover{
 /*calculadora*/
 .calcfundo{
     background-image: linear-gradient(45deg, var(--cor2),var(--cor5),var(--cor4));
-    height: 65vh;
+    height: 550px;
     max-width: 670px;
     margin: 20px;
     min-width: 280px;
